@@ -3,384 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FORJA — Calistenia sob medida</title>
+<title>Calistenia para Iniciantes — Guia Completo + Planilha Grátis</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap');
 
 :root{
-  --ink:#0e131a; --ink-2:#161e26; --ink-3:#1e2733;
-  --bone:#EDE8DD; --bone-dim:#a8a396; --bone-faint:#5c6672;
-  --ember:#E8A33D; --ember-soft:rgba(232,163,61,0.14);
-  --forge:#C1502E;
-  --line:#26303c;
-  --iron:#5b6470; --bronze:#9c6b3e; --steel:#8fa3b0; --titan:#c9d8e0; --legend:#E8A33D;
+  --ink:#0f1a16; --ink-2:#16241f; --ink-3:#1e332b;
+  --paper:#F7F2E7; --paper-dim:#c9c2ad;
+  --moss:#7FA37A; --moss-bright:#A8E29D; --moss-deep:#4d7a48;
+  --gold:#F2C14E;
+  --line:#2c4038;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--ink);color:var(--bone);font-family:'Inter',sans-serif;line-height:1.5;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;}
-h1,h2,h3,h4{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:0.3px;color:var(--bone);}
+body{background:var(--ink);color:var(--paper);font-family:'Inter',sans-serif;line-height:1.55;
+  -webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;color:var(--paper);}
 a{color:inherit;text-decoration:none;}
-.wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+.wrap{max-width:980px;margin:0 auto;padding:0 26px;}
 .mono{font-family:'JetBrains Mono',monospace;}
-.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:3.5px;color:var(--ember);
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:3px;color:var(--moss-bright);
   text-transform:uppercase;}
-section{position:relative;}
 
-nav{position:sticky;top:0;z-index:100;background:rgba(14,19,26,0.85);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
-.brand{display:flex;align-items:center;gap:12px;}
-.brand-mark{width:32px;height:32px;border:2px solid var(--ember);display:flex;align-items:center;justify-content:center;
-  transform:rotate(45deg);flex:none;}
-.brand-mark span{transform:rotate(-45deg);font-family:'Bebas Neue',sans-serif;font-size:15px;color:var(--ember);}
-.brand-name{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;}
-.nav-links{display:flex;align-items:center;gap:32px;}
-.nav-links a.ghost{font-size:14.5px;color:var(--bone-dim);}
-.btn{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:0.5px;padding:12px 26px;border-radius:7px;
-  display:inline-block;transition:transform .15s ease, box-shadow .15s ease;}
-.btn-primary{background:var(--ember);color:var(--ink);}
-.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px -8px rgba(232,163,61,0.5);}
-.btn-ghost{border:1px solid var(--line);color:var(--bone);}
-.btn-ghost:hover{border-color:var(--ember);color:var(--ember);}
+.topbar{background:var(--gold);text-align:center;padding:11px 16px;font-family:'JetBrains Mono',monospace;
+  font-size:13px;color:var(--ink);font-weight:700;letter-spacing:0.3px;}
 
-.hero{padding:100px 0 70px;position:relative;overflow:hidden;}
-#spark-layer{position:absolute;inset:0;pointer-events:none;z-index:0;}
-.spark{position:absolute;bottom:-20px;border-radius:50%;
-  background:radial-gradient(circle,var(--ember) 0%,rgba(232,163,61,0) 70%);animation:sparkRise linear forwards;}
-@keyframes sparkRise{0%{transform:translateY(0);opacity:0;}10%{opacity:.7;}100%{transform:translateY(-780px) translateX(var(--drift));opacity:0;}}
-.hero-inner{position:relative;z-index:1;max-width:760px;}
-.hero h1{font-size:76px;line-height:0.98;margin:20px 0 26px;}
-.hero h1 .strike{color:var(--bone-faint);text-decoration:line-through;text-decoration-color:var(--forge);
-  text-decoration-thickness:3px;}
-.hero h1 .glow{color:var(--ember);}
-.hero-sub{font-size:19px;color:var(--bone-dim);max-width:540px;margin-bottom:36px;}
-.hero-cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-.hero-note{font-size:13.5px;color:var(--bone-faint);}
+.hero{padding:70px 0 50px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;}
+.hero h1{font-size:50px;line-height:1.08;margin:18px 0 20px;}
+.hero h1 em{color:var(--moss-bright);font-style:normal;}
+.hero p{font-size:18px;color:var(--paper-dim);max-width:480px;margin-bottom:26px;}
+.bonus-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(242,193,78,0.12);
+  border:1px solid var(--gold);border-radius:10px;padding:12px 18px;margin-bottom:26px;}
+.bonus-tag .star{color:var(--gold);font-size:18px;}
+.bonus-tag span{font-size:14px;color:var(--paper);font-weight:600;}
 
-.gauge-section{padding:20px 0 90px;}
-.gauge-label-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px;}
-.gauge-caption{font-size:15px;color:var(--bone-dim);}
-.gauge{position:relative;height:14px;border-radius:8px;overflow:hidden;display:flex;border:1px solid var(--line);}
-.gauge-seg{flex:1;position:relative;}
-.gauge-seg:nth-child(1){background:var(--iron);}
-.gauge-seg:nth-child(2){background:var(--bronze);}
-.gauge-seg:nth-child(3){background:var(--steel);}
-.gauge-seg:nth-child(4){background:var(--titan);}
-.gauge-seg:nth-child(5){background:linear-gradient(90deg,#f0b256,var(--legend));}
-.gauge-marker{position:absolute;top:50%;left:0%;width:22px;height:22px;border-radius:50%;background:var(--ember);
-  border:3px solid var(--ink);transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(232,163,61,0.25);
-  transition:left 1.8s cubic-bezier(.22,1,.36,1);}
-.gauge-names{display:flex;margin-top:14px;}
-.gauge-names span{flex:1;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--bone-faint);
-  text-transform:uppercase;letter-spacing:1px;}
-.gauge-names span:first-child{text-align:left;}
-.gauge-names span:last-child{text-align:right;}
+.price-row{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;}
+.price-now{font-family:'Fraunces',serif;font-size:56px;font-weight:900;color:var(--moss-bright);}
+.price-label{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--paper-dim);}
 
-.problem{padding:70px 0;border-top:1px solid var(--line);}
-.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px;}
-.problem-card{padding:28px 0;border-top:1px solid var(--line);}
-.problem-card .x{color:var(--forge);font-size:22px;font-weight:800;margin-bottom:14px;display:block;}
-.problem-card p{font-size:19px;color:var(--bone);line-height:1.35;}
+.btn-comprar{display:inline-flex;align-items:center;gap:10px;background:var(--moss-bright);color:var(--ink);
+  font-family:'Inter',sans-serif;font-weight:800;font-size:17px;padding:18px 32px;border-radius:10px;
+  transition:transform .15s ease, box-shadow .15s ease;}
+.btn-comprar:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(168,226,157,0.55);}
+.trust-row{display:flex;gap:18px;margin-top:16px;flex-wrap:wrap;}
+.trust-item{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--paper-dim);}
 
-.how{padding:90px 0;border-top:1px solid var(--line);}
-.how-head{max-width:600px;margin-bottom:56px;}
-.how-head h2{font-size:44px;margin-top:14px;}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line);}
-.step{background:var(--ink);padding:34px 26px;}
-.step-num{font-family:'JetBrains Mono',monospace;color:var(--ember);font-size:13px;margin-bottom:20px;}
-.step h4{font-size:24px;margin-bottom:10px;}
-.step p{font-size:14.5px;color:var(--bone-dim);}
+.book-visual{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;aspect-ratio:210/297;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  padding:40px 30px;box-shadow:0 50px 90px -30px rgba(0,0,0,0.7);position:relative;overflow:hidden;}
+.book-visual::before{content:'';position:absolute;inset:14px;border:1px solid rgba(168,226,157,0.3);}
+.book-ribbon{position:absolute;top:24px;right:-38px;background:var(--gold);color:var(--ink);
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:6px 44px;transform:rotate(35deg);
+  letter-spacing:0.5px;}
+.book-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--moss-bright);
+  margin-bottom:18px;}
+.book-title{font-family:'Fraunces',serif;font-size:28px;color:var(--paper);line-height:1.15;}
+.book-sub{font-size:12.5px;color:var(--paper-dim);margin-top:16px;max-width:220px;line-height:1.5;}
 
-.features{padding:90px 0;border-top:1px solid var(--line);}
-.features-head{max-width:600px;margin-bottom:48px;}
-.features-head h2{font-size:44px;margin-top:14px;}
-.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.f-card{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:30px;transition:border-color .2s ease;}
-.f-card:hover{border-color:var(--ember);}
-.f-icon{width:44px;height:44px;border-radius:10px;background:var(--ember-soft);display:flex;align-items:center;
-  justify-content:center;margin-bottom:22px;font-size:20px;}
-.f-card h4{font-size:21px;margin-bottom:9px;}
-.f-card p{font-size:14px;color:var(--bone-dim);line-height:1.5;}
+.bonus-section{padding:60px 0;border-top:1px solid var(--line);}
+.bonus-card{background:var(--ink-2);border:1px solid var(--gold);border-radius:16px;padding:38px 40px;
+  display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;}
+.bonus-icon{width:64px;height:64px;border-radius:14px;background:rgba(242,193,78,0.15);display:flex;
+  align-items:center;justify-content:center;font-size:30px;flex:none;}
+.bonus-card h3{font-size:22px;margin-bottom:8px;}
+.bonus-card p{color:var(--paper-dim);font-size:14.5px;}
+.bonus-card .valor{color:var(--gold);font-weight:700;}
 
-.pricing{padding:90px 0;border-top:1px solid var(--line);}
-.price-card{max-width:520px;margin:0 auto;background:var(--ink-2);border:1px solid var(--ember);border-radius:18px;
-  padding:48px 44px;text-align:center;position:relative;}
-.price-card::before{content:'3 DIAS GRÁTIS';position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:var(--ember);color:var(--ink);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;
-  padding:6px 16px;border-radius:20px;font-weight:600;}
-.price-num{font-family:'Bebas Neue',sans-serif;font-size:80px;color:var(--ember);margin:18px 0 4px;}
-.price-num span{font-size:24px;color:var(--bone-dim);}
-.price-list{text-align:left;margin:32px 0;list-style:none;}
-.price-list li{font-size:15px;color:var(--bone-dim);padding:11px 0;border-top:1px solid var(--line);
+.chapters{padding:70px 0;border-top:1px solid var(--line);}
+.chapters h2{font-size:30px;margin-bottom:34px;}
+.chapter-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.chapter-item{display:flex;gap:16px;padding:16px 20px 16px 0;border-bottom:1px solid var(--line);}
+.chapter-item:nth-child(odd){border-right:1px solid var(--line);padding-left:0;}
+.chapter-item:nth-child(even){padding-left:20px;}
+.chapter-num{font-family:'JetBrains Mono',monospace;color:var(--moss-bright);font-size:13px;flex:none;
+  width:24px;}
+.chapter-name{font-size:14.5px;color:var(--paper);}
+
+.about{padding:70px 0;border-top:1px solid var(--line);max-width:680px;}
+.about h2{font-size:30px;margin-bottom:20px;}
+.about p{font-size:16px;color:var(--paper-dim);margin-bottom:16px;}
+
+.price-card-final{max-width:520px;margin:0 auto;background:var(--ink-2);border:1px solid var(--moss-bright);
+  border-radius:18px;padding:46px 42px;text-align:center;}
+.price-card-final .price-now{font-size:64px;}
+.price-list{text-align:left;margin:28px 0;list-style:none;}
+.price-list li{font-size:14.5px;color:var(--paper-dim);padding:10px 0;border-top:1px solid var(--line);
   display:flex;gap:12px;align-items:flex-start;}
 .price-list li:first-child{border-top:none;}
-.price-list li::before{content:'✓';color:var(--ember);font-weight:700;flex:none;}
-.price-card .btn{width:100%;text-align:center;padding:16px;font-size:19px;}
+.price-list li::before{content:'✓';color:var(--moss-bright);font-weight:700;flex:none;}
+.cta-final{padding:80px 0 100px;text-align:center;border-top:1px solid var(--line);}
 
-.faq{padding:90px 0;border-top:1px solid var(--line);max-width:760px;margin:0 auto;}
-.faq-item{border-top:1px solid var(--line);padding:26px 0;}
-.faq-item:last-child{border-bottom:1px solid var(--line);}
-.faq-q{font-size:19px;font-weight:600;display:flex;justify-content:space-between;align-items:center;cursor:pointer;}
-.faq-q .plus{color:var(--ember);font-family:'JetBrains Mono',monospace;font-size:20px;transition:transform .25s ease;}
-.faq-item.open .plus{transform:rotate(45deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
-.faq-item.open .faq-a{max-height:200px;}
-.faq-a p{font-size:15px;color:var(--bone-dim);padding-top:14px;max-width:600px;}
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;}
+footer p{font-size:12.5px;color:var(--paper-dim);}
 
-.final-cta{padding:110px 0;text-align:center;border-top:1px solid var(--line);}
-.final-cta h2{font-size:56px;max-width:640px;margin:18px auto 36px;line-height:1.05;}
-
-footer{border-top:1px solid var(--line);padding:36px 0;}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-.footer-links{display:flex;gap:26px;}
-.footer-links a{font-size:13px;color:var(--bone-faint);}
-.footer-links a:hover{color:var(--ember);}
-.copyright{font-size:13px;color:var(--bone-faint);}
-
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
-.reveal.in{opacity:1;transform:translateY(0);}
-
-@media (max-width:860px){
-  .hero h1{font-size:48px;}
-  .problem-grid{grid-template-columns:1fr;gap:0;}
-  .steps{grid-template-columns:1fr 1fr;}
-  .bento{grid-template-columns:1fr;}
-  .how-head h2, .features-head h2{font-size:34px;}
-  .final-cta h2{font-size:36px;}
-  .nav-links a.ghost{display:none;}
-  .price-card{padding:36px 26px;}
-  .gauge-names span{font-size:9.5px;}
-}
-@media (prefers-reduced-motion: reduce){
-  .spark{display:none;}
-  .reveal{opacity:1;transform:none;transition:none;}
-  .gauge-marker{transition:none;}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:50px;}
+  .hero h1{font-size:34px;}
+  .book-visual{max-width:280px;margin:0 auto;}
+  .bonus-card{grid-template-columns:1fr;text-align:center;justify-items:center;}
+  .chapter-grid{grid-template-columns:1fr;}
+  .chapter-item:nth-child(odd){border-right:none;padding-left:0;}
+  .chapter-item:nth-child(even){padding-left:0;}
+  .price-card-final{padding:34px 26px;}
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="wrap">
-    <div class="brand">
-      <div class="brand-mark"><span>F</span></div>
-      <div class="brand-name">FORJA</div>
-    </div>
-    <div class="nav-links">
-      <a href="#como-funciona" class="ghost">Como funciona</a>
-      <a href="#recursos" class="ghost">Recursos</a>
-      <a href="#preco" class="ghost">Preço</a>
-      <a href="#preco" class="btn btn-primary">Começar grátis</a>
-    </div>
-  </div>
-</nav>
+<div class="topbar">🎁 QUEM COMPRAR HOJE GANHA A PLANILHA DE TREINO DE BRINDE</div>
 
-<section class="hero">
-  <div id="spark-layer"></div>
-  <div class="wrap hero-inner">
-    <div class="eyebrow">Calistenia sob medida</div>
-    <h1>Seu treino não devia ser <span class="strike">genérico</span>.<br>
-    Ele devia ser <span class="glow">forjado</span> pra você.</h1>
-    <p class="hero-sub">Diga seu nível, seu objetivo e o que você tem disponível. O FORJA monta seu plano de
-    calistenia na hora — e evolui junto com você, treino a treino.</p>
-    <div class="hero-cta-row">
-      <a href="#preco" class="btn btn-primary">Começar teste grátis de 3 dias</a>
-      <span class="hero-note">R$14,99/mês depois. Cancele quando quiser.</span>
-    </div>
-  </div>
-</section>
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Guia completo · PDF · 18 páginas</div>
+      <h1>Pare de treinar <em>no achismo.</em><br>Aprenda calistenia do jeito certo.</h1>
+      <p>Guia direto ao ponto: movimentos fundamentais, como montar seu treino, progressão,
+      alimentação e os erros que travam quem tá começando. Sem academia, sem equipamento.</p>
 
-<section class="gauge-section">
-  <div class="wrap reveal">
-    <div class="gauge-label-row">
-      <span class="eyebrow">Sua evolução, visível</span>
-      <span class="gauge-caption">Cada treino te empurra mais pra frente nessa régua.</span>
-    </div>
-    <div class="gauge">
-      <div class="gauge-seg"></div><div class="gauge-seg"></div><div class="gauge-seg"></div>
-      <div class="gauge-seg"></div><div class="gauge-seg"></div>
-      <div class="gauge-marker" id="gaugeMarker"></div>
-    </div>
-    <div class="gauge-names">
-      <span>Ferro</span><span>Bronze</span><span>Aço</span><span>Titânio</span><span>Lenda</span>
-    </div>
-  </div>
-</section>
-
-<section class="problem">
-  <div class="wrap">
-    <div class="eyebrow reveal">O problema</div>
-    <div class="problem-grid">
-      <div class="problem-card reveal"><span class="x">✕</span><p>Treino de internet não sabe seu nível, nem se
-        você tem uma barra fixa em casa.</p></div>
-      <div class="problem-card reveal"><span class="x">✕</span><p>Academia sem plano vira esteira e um exercício
-        aleatório de vez em quando.</p></div>
-      <div class="problem-card reveal"><span class="x">✕</span><p>Você começa, empaca depois de duas semanas, e
-        começa tudo de novo do zero.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="how" id="como-funciona">
-  <div class="wrap">
-    <div class="how-head reveal">
-      <div class="eyebrow">Como funciona</div>
-      <h2>Quatro passos até o primeiro treino.</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <h4>Conte sobre você</h4>
-        <p>Nível, objetivo, dias disponíveis por semana e o equipamento que você tem — ou não tem.</p>
+      <div class="bonus-tag">
+        <span class="star">★</span>
+        <span>Bônus grátis: planilha de treino pra registrar sua evolução</span>
       </div>
-      <div class="step reveal">
-        <div class="step-num">02</div>
-        <h4>Receba seu plano</h4>
-        <p>Calistenia dividida por grupo muscular, com séries, cargas e descanso prontos em segundos.</p>
+
+      <div class="price-row">
+        <span class="price-now">R$8,99</span>
+        <span class="price-label">pagamento único · acesso pra sempre</span>
       </div>
-      <div class="step reveal">
-        <div class="step-num">03</div>
-        <h4>Treine guiado</h4>
-        <p>Um cronômetro cuida do tempo de descanso entre séries. Você só cuida do esforço.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">04</div>
-        <h4>Suba de patente</h4>
-        <p>De Ferro a Lenda — cada treino concluído te aproxima da próxima têmpera.</p>
+
+      <a href="https://pay.cakto.com.br/32ngd6z" class="btn-comprar">
+        Quero o guia + planilha grátis →
+      </a>
+      <div class="trust-row">
+        <span class="trust-item">✓ ENTREGA IMEDIATA</span>
+        <span class="trust-item">✓ PDF + XLSX</span>
+        <span class="trust-item">✓ ACESSO VITALÍCIO</span>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="features" id="recursos">
-  <div class="wrap">
-    <div class="features-head reveal">
-      <div class="eyebrow">O que vem junto</div>
-      <h2>Feito pra quem treina de verdade.</h2>
+    <div class="book-visual">
+      <div class="book-ribbon">+ BÔNUS</div>
+      <div class="book-eyebrow">G U I A   C O M P L E T O</div>
+      <div class="book-title">Calistenia para Iniciantes</div>
+      <div class="book-sub">Tudo que você precisa saber pra começar a treinar sem
+      academia, sem equipamento, sem desculpa.</div>
     </div>
-    <div class="bento">
-      <div class="f-card reveal"><div class="f-icon">⏱</div><h4>Cronômetro guiado</h4>
-        <p>Um mostrador circular conta o descanso entre séries e já avisa o próximo exercício.</p></div>
-      <div class="f-card reveal"><div class="f-icon">🔄</div><h4>Troque um exercício</h4>
-        <p>Não curtiu algum movimento? Troque por outro do mesmo grupo muscular, na hora.</p></div>
-      <div class="f-card reveal"><div class="f-icon">🥉</div><h4>Patentes e conquistas</h4>
-        <p>Ferro, Bronze, Aço, Titânio, Lenda — e emblemas por semanas, sequências e marcos.</p></div>
-      <div class="f-card reveal"><div class="f-icon">📄</div><h4>Baixe em PDF</h4>
-        <p>Leve seu treino da semana pra academia, sem depender de internet.</p></div>
-      <div class="f-card reveal"><div class="f-icon">📸</div><h4>Card pra compartilhar</h4>
-        <p>Sua patente e sua sequência de dias, prontas num card pra postar onde quiser.</p></div>
-      <div class="f-card reveal"><div class="f-icon">👥</div><h4>Feed da comunidade</h4>
-        <p>Veja o progresso de quem treina junto com você — e comemore o seu também.</p></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="pricing" id="preco">
-  <div class="wrap">
-    <div class="price-card reveal">
-      <div class="eyebrow">Um plano. Tudo incluso.</div>
-      <div class="price-num">R$14,99<span>/mês</span></div>
+  <section class="bonus-section">
+    <div class="bonus-card">
+      <div class="bonus-icon">📊</div>
+      <div>
+        <h3>Bônus: Planilha de Treino <span class="valor">(de graça pra quem compra)</span></h3>
+        <p>Uma planilha pronta pra registrar cada treino — exercício, séries, repetições,
+        carga e sensação de esforço. O resumo calcula sua evolução sozinho, sem você
+        precisar mexer em fórmula nenhuma.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapters">
+    <h2>O que tem dentro do guia</h2>
+    <div class="chapter-grid">
+      <div class="chapter-item"><span class="chapter-num">01</span><span class="chapter-name">Por que calistenia</span></div>
+      <div class="chapter-item"><span class="chapter-num">02</span><span class="chapter-name">Antes de começar — segurança e aquecimento</span></div>
+      <div class="chapter-item"><span class="chapter-num">03</span><span class="chapter-name">Os seis movimentos fundamentais</span></div>
+      <div class="chapter-item"><span class="chapter-num">04</span><span class="chapter-name">Materiais que você pode usar pra treinar</span></div>
+      <div class="chapter-item"><span class="chapter-num">05</span><span class="chapter-name">Como montar seu treino de iniciante</span></div>
+      <div class="chapter-item"><span class="chapter-num">06</span><span class="chapter-name">Plano de 4 semanas pra começar</span></div>
+      <div class="chapter-item"><span class="chapter-num">07</span><span class="chapter-name">Como progredir sem se machucar</span></div>
+      <div class="chapter-item"><span class="chapter-num">08</span><span class="chapter-name">Erros mais comuns de quem tá começando</span></div>
+      <div class="chapter-item"><span class="chapter-num">09</span><span class="chapter-name">Alimentação básica pra quem treina</span></div>
+      <div class="chapter-item"><span class="chapter-num">10</span><span class="chapter-name">Consistência — o único segredo que funciona</span></div>
+      <div class="chapter-item"><span class="chapter-num">11</span><span class="chapter-name">Alongamento e mobilidade pós-treino</span></div>
+      <div class="chapter-item"><span class="chapter-num">12</span><span class="chapter-name">Glossário rápido</span></div>
+      <div class="chapter-item"><span class="chapter-num">13</span><span class="chapter-name">Perguntas frequentes</span></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>Pra quem é esse guia</h2>
+    <p>Pra quem nunca treinou e não sabe por onde começar, pra quem já tentou e desistiu,
+    ou pra quem só quer entender o básico de verdade antes de montar uma rotina.</p>
+    <p>Sem jargão técnico desnecessário, sem promessa milagrosa — só o que realmente
+    importa pra sair do zero com segurança e consistência.</p>
+  </section>
+
+  <section class="cta-final">
+    <div class="price-card-final">
+      <div class="eyebrow">Guia + planilha de treino</div>
+      <div class="price-now">R$8,99</div>
       <ul class="price-list">
-        <li>3 dias de teste grátis, sem cartão bloqueado</li>
-        <li>Plano de treino ilimitado, sempre atualizado</li>
-        <li>Cronômetro guiado e troca de exercícios</li>
-        <li>Patentes, conquistas e histórico de evolução</li>
-        <li>PDF pra baixar e feed da comunidade</li>
-        <li>Cancele quando quiser, direto pelo painel</li>
+        <li>Guia completo em PDF, 18 páginas, 13 capítulos</li>
+        <li>Bônus: planilha de treino em Excel, pronta pra usar</li>
+        <li>Pagamento único — sem mensalidade</li>
+        <li>Entrega imediata após a compra</li>
       </ul>
-      <a href="https://forja-app-nynffx3v55fuw6jagamry4.streamlit.app/" class="btn btn-primary">Começar teste grátis</a>
+      <a href="https://pay.cakto.com.br/32ngd6z" class="btn-comprar" style="width:100%;justify-content:center;">
+        Quero o guia + planilha grátis →
+      </a>
     </div>
-  </div>
-</section>
-
-<section class="faq">
-  <div class="eyebrow reveal" style="margin-bottom:20px;">Perguntas frequentes</div>
-  <div class="faq-item reveal">
-    <div class="faq-q">Preciso de equipamento? <span class="plus">+</span></div>
-    <div class="faq-a"><p>Não. Você pode treinar só com o peso do corpo. Se tiver barra fixa, elástico ou
-      halteres, o plano se ajusta pra usar isso também.</p></div>
-  </div>
-  <div class="faq-item reveal">
-    <div class="faq-q">Funciona pra quem tá começando agora? <span class="plus">+</span></div>
-    <div class="faq-a"><p>Sim. O nível iniciante existe justamente pra isso — os exercícios e a progressão são
-      adequados pra quem nunca treinou calistenia.</p></div>
-  </div>
-  <div class="faq-item reveal">
-    <div class="faq-q">Como cancelo? <span class="plus">+</span></div>
-    <div class="faq-a"><p>Direto pelo painel da sua conta, a qualquer momento. Você mantém acesso até o fim do
-      período já pago.</p></div>
-  </div>
-  <div class="faq-item reveal">
-    <div class="faq-q">É só calistenia, ou tem outros tipos de treino? <span class="plus">+</span></div>
-    <div class="faq-a"><p>O foco é calistenia, mas também tem a opção de treino em casa com equipamento simples,
-      pra quem prefere.</p></div>
-  </div>
-</section>
-
-<section class="final-cta">
-  <div class="wrap">
-    <div class="eyebrow reveal">Bora começar</div>
-    <h2 class="reveal">Seu primeiro treino forjado te espera.</h2>
-    <a href="https://forja-app-nynffx3v55fuw6jagamry4.streamlit.app/" class="btn btn-primary reveal">Começar teste grátis de 3 dias</a>
-  </div>
-</section>
+  </section>
+</div>
 
 <footer>
-  <div class="wrap">
-    <div class="brand">
-      <div class="brand-mark" style="width:24px;height:24px;"><span style="font-size:11px;">F</span></div>
-      <span class="copyright">FORJA</span>
-    </div>
-    <div class="footer-links">
-      <a href="https://forja-app-nynffx3v55fuw6jagamry4.streamlit.app/">Política de privacidade</a>
-      <a href="https://forja-app-nynffx3v55fuw6jagamry4.streamlit.app/">Termos de uso</a>
-    </div>
-    <span class="copyright">© 2026 FORJA</span>
-  </div>
+  <p>Guia de calistenia para iniciantes.</p>
 </footer>
 
-<script>
-const revealEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-}, {threshold:0.15});
-revealEls.forEach(el=> io.observe(el));
-
-const marker = document.getElementById('gaugeMarker');
-const gaugeIo = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      requestAnimationFrame(()=> marker.style.left = '34%');
-      gaugeIo.unobserve(e.target);
-    }
-  });
-}, {threshold:0.4});
-gaugeIo.observe(document.querySelector('.gauge'));
-
-function spawnSpark(){
-  const layer = document.getElementById('spark-layer');
-  if(!layer) return;
-  const s = document.createElement('div');
-  s.className = 'spark';
-  const size = 3 + Math.random()*5;
-  s.style.width = size+'px'; s.style.height = size+'px';
-  s.style.left = (Math.random()*100)+'%';
-  s.style.setProperty('--drift', (Math.random()*100-50)+'px');
-  s.style.animationDuration = (5 + Math.random()*4)+'s';
-  layer.appendChild(s);
-  setTimeout(()=> s.remove(), 10000);
-}
-if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  setInterval(spawnSpark, 450);
-  for(let i=0;i<5;i++) setTimeout(spawnSpark, i*350);
-}
-
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.querySelector('.faq-q').addEventListener('click', ()=>{
-    item.classList.toggle('open');
-  });
-});
-</script>
 </body>
 </html>
