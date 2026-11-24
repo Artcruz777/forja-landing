@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calistenia para Iniciantes — Guia Completo + Site FORJA + Planilha</title>
+<title>Calistenia para Iniciantes — Guia Completo + 4 Bônus</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap');
 
@@ -154,6 +154,30 @@ a{color:inherit;text-decoration:none;}
 footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;}
 footer p{font-size:12.5px;color:var(--paper-dim);}
 
+/* aviso de saída */
+.exit-overlay{position:fixed;inset:0;background:rgba(8,11,15,0.78);display:none;align-items:center;
+  justify-content:center;z-index:1000;padding:16px;}
+.exit-overlay.show{display:flex;animation:exitfade .25s ease;}
+@keyframes exitfade{from{opacity:0}to{opacity:1}}
+.exit-box{position:relative;background:var(--ink-2);border:2px solid var(--gold);border-radius:18px;
+  max-width:460px;width:100%;padding:34px 30px 26px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,0.6);}
+.exit-close{position:absolute;top:10px;right:14px;background:none;border:none;color:var(--paper-dim);
+  font-size:26px;cursor:pointer;line-height:1;}
+.exit-eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:3px;color:var(--gold);}
+.exit-box h3{font-size:40px;line-height:1;margin:10px 0 14px;}
+.exit-cover{width:120px;aspect-ratio:210/297;margin:4px auto 18px;background:var(--ink);border:1px solid var(--line);
+  border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 18px 40px -12px rgba(0,0,0,0.8);transform:rotate(-4deg);}
+.exit-cover .forja-mark{width:22px;height:22px;margin-bottom:10px;}
+.exit-cover .forja-mark span{font-size:12px;}
+.exit-cover .t{font-family:'Bebas Neue',sans-serif;font-size:20px;line-height:1;color:var(--paper);}
+.exit-cover .s{font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:2px;color:var(--gold);margin-top:6px;}
+.exit-box p{font-size:15px;color:var(--paper-dim);margin-bottom:18px;}
+.exit-box p strong{color:var(--paper);}
+.exit-no{display:block;margin:14px auto 0;background:none;border:none;color:var(--paper-dim);font-size:13px;
+  text-decoration:underline;cursor:pointer;}
+.exit-garantia{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--paper-dim);margin-top:12px;}
+
 @media (max-width:760px){
   .hero{grid-template-columns:1fr;padding-top:50px;}
   .hero h1{font-size:48px;}
@@ -171,7 +195,7 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
 </head>
 <body>
 
-<div class="topbar">🎁 QUEM COMPRAR GANHA 3 BÔNUS — INCLUINDO O SITE QUE MONTA SEU TREINO</div>
+<div class="topbar">🎁 QUEM COMPRAR GANHA 4 BÔNUS — INCLUINDO O SITE QUE MONTA SEU TREINO</div>
 
 <div class="wrap">
   <section class="hero">
@@ -187,7 +211,7 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
 
       <div class="bonus-tag">
         <span class="star">★</span>
-        <span>Bônus: site FORJA que monta seu treino + planilha + lista personalizável</span>
+        <span>Bônus: site FORJA + ebook 10 Treinos de 15 Minutos + planilha + lista</span>
       </div>
 
       <div class="price-launch-tag">◆ Oferta</div>
@@ -198,19 +222,19 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
       <div class="price-label" style="margin-bottom:22px;">pagamento único · acesso pra sempre</div>
 
       <a href="https://pay.cakto.com.br/32ngd6z" class="btn-comprar">
-        Quero o guia + os 3 bônus →
+        Quero o guia + os 4 bônus →
       </a>
       <div style="font-size:12.5px;color:var(--paper-dim);margin-top:10px;">
         <strong style="color:var(--paper);">Mais de 100 pessoas</strong> já compraram
       </div>
       <div class="trust-row">
         <span class="trust-item">✓ ENTREGA IMEDIATA</span>
-        <span class="trust-item">✓ PDF + SITE + XLSX</span>
+        <span class="trust-item">✓ 2 PDFs + SITE + XLSX</span>
         <span class="trust-item">✓ ACESSO VITALÍCIO</span>
       </div>
     </div>
     <div class="book-visual">
-      <div class="book-ribbon">+ 3 BÔNUS</div>
+      <div class="book-ribbon">+ 4 BÔNUS</div>
       <div class="forja-mark"><span>F</span></div>
       <div class="book-brand">FORJA</div>
       <div class="book-eyebrow">G U I A   C O M P L E T O</div>
@@ -247,6 +271,15 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
         <p>Um cardápio com todos os exercícios do guia, organizados por grupo muscular e
         nível — pra você montar seu próprio treino semanal do seu jeito, com exemplo
         pronto em cada dia pra não ficar perdido.</p>
+      </div>
+    </div>
+    <div class="bonus-card" style="margin-top:18px;">
+      <div class="bonus-icon">⏱️</div>
+      <div>
+        <h3>Bônus 4: Ebook 10 Treinos de 15 Minutos <span class="valor">(de graça pra quem compra)</span></h3>
+        <p>Pros dias em que o tempo aperta: 10 treinos prontos de 15 minutos — corpo inteiro,
+        pernas, core, cardio sem pular (bom pra apartamento), treino de hotel e um desafio pra
+        medir sua evolução. Cada um com versão pra quem está começando e pra quem já evoluiu.</p>
       </div>
     </div>
   </section>
@@ -378,7 +411,7 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
     <div class="faq-item">
       <div class="faq-q">Como recebo o material depois de comprar? <span class="plus">+</span></div>
       <div class="faq-a"><p>Assim que o pagamento é aprovado (geralmente em segundos via Pix), você
-      recebe por email o link do PDF, da planilha, da lista e o acesso ao site FORJA.</p></div>
+      recebe por email o link do guia, do ebook bônus 10 Treinos de 15 Minutos, da planilha, da lista e o acesso ao site FORJA.</p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Como funciona o site FORJA? <span class="plus">+</span></div>
@@ -405,7 +438,7 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
 
   <section class="cta-final">
     <div class="price-card-final">
-      <div class="eyebrow">Guia + site FORJA + planilha</div>
+      <div class="eyebrow">Guia + 4 bônus</div>
       <div class="price-launch-tag" style="margin-top:14px;">◆ Oferta</div>
       <div class="price-now">R$8,99</div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--paper-dim);
@@ -415,18 +448,39 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
         <li>Bônus 1: site FORJA, que monta seu treino sob medida e sobe a dificuldade sozinho</li>
         <li>Bônus 2: planilha de treino em Excel, pronta pra usar</li>
         <li>Bônus 3: lista de treino personalizável, com cardápio de exercícios</li>
+        <li>Bônus 4: ebook 10 Treinos de 15 Minutos, pros dias corridos</li>
         <li>Pagamento único — sem mensalidade</li>
         <li>Entrega imediata após a compra</li>
         <li>7 dias de garantia (direito de arrependimento por lei)</li>
       </ul>
       <a href="https://pay.cakto.com.br/32ngd6z" class="btn-comprar" style="width:100%;justify-content:center;">
-        Quero o guia + os 3 bônus →
+        Quero o guia + os 4 bônus →
       </a>
       <div style="font-size:12.5px;color:var(--paper-dim);margin-top:12px;">
         <strong style="color:var(--paper);">Mais de 100 pessoas</strong> já compraram
       </div>
     </div>
   </section>
+</div>
+
+<div class="exit-overlay" id="exit-overlay" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+  <div class="exit-box">
+    <button class="exit-close" type="button" aria-label="Fechar">×</button>
+    <div class="exit-eyebrow">🎁 ESPERA, ANTES DE SAIR</div>
+    <h3 id="exit-title">TEM UM EBOOK DE BRINDE PRA VOCÊ</h3>
+    <div class="exit-cover">
+      <div class="forja-mark"><span>F</span></div>
+      <div class="t">10 TREINOS<br>DE 15 MIN</div>
+      <div class="s">BÔNUS</div>
+    </div>
+    <p>Junto com o guia você leva o ebook <strong>10 Treinos de 15 Minutos</strong>, pros dias corridos,
+    e mais 3 bônus — incluindo o site que monta seu treino. Tudo por <strong>R$ 8,99</strong>, pagamento único.</p>
+    <a href="https://pay.cakto.com.br/32ngd6z" class="btn-comprar" style="width:100%;justify-content:center;">
+      Quero o guia + os 4 bônus →
+    </a>
+    <div class="exit-garantia">7 dias de garantia · entrega imediata</div>
+    <button class="exit-no" type="button">Não, obrigado</button>
+  </div>
 </div>
 
 <footer>
@@ -439,6 +493,38 @@ document.querySelectorAll('.faq-item').forEach(item=>{
     item.classList.toggle('open');
   });
 });
+
+// Aviso de saída: aparece uma vez por visita, quando a pessoa parece estar indo embora
+(function(){
+  const overlay = document.getElementById('exit-overlay');
+  let mostrado = false, comprou = false;
+  try { mostrado = sessionStorage.getItem('forja_exit') === '1'; } catch(e) {}
+  document.querySelectorAll('.btn-comprar').forEach(b => b.addEventListener('click', () => { comprou = true; }));
+  function abrir(){
+    if (mostrado || comprou) return;
+    mostrado = true;
+    try { sessionStorage.setItem('forja_exit', '1'); } catch(e) {}
+    overlay.classList.add('show');
+  }
+  function fechar(){ overlay.classList.remove('show'); }
+  overlay.querySelector('.exit-close').addEventListener('click', fechar);
+  overlay.querySelector('.exit-no').addEventListener('click', fechar);
+  overlay.addEventListener('click', e => { if (e.target === overlay) fechar(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') fechar(); });
+  // computador: mouse saindo pelo topo da janela
+  document.addEventListener('mouseout', e => { if (!e.relatedTarget && e.clientY <= 0) abrir(); });
+  // celular: rolagem rápida pra cima depois de já ter descido a página
+  let ultimoY = window.scrollY, ultimoT = Date.now(), desceu = false;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY, t = Date.now();
+    if (y > document.body.scrollHeight * 0.3) desceu = true;
+    const velocidade = (ultimoY - y) / Math.max(1, t - ultimoT);
+    if (desceu && velocidade > 2.5 && y > 200) abrir();
+    ultimoY = y; ultimoT = t;
+  }, { passive: true });
+  // celular: depois de 45 segundos na página sem clicar em comprar
+  if (matchMedia('(pointer: coarse)').matches) setTimeout(abrir, 45000);
+})();
 
 </script>
 
