@@ -66,8 +66,8 @@ a{color:inherit;text-decoration:none;}
 .book-ribbon{position:absolute;top:24px;right:-38px;background:var(--gold);color:var(--ink);
   font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:6px 44px;transform:rotate(35deg);
   letter-spacing:0.5px;}
-.book-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--moss-bright);
-  margin-bottom:18px;}
+.book-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:6px;color:var(--moss-bright);
+  margin-bottom:18px;white-space:nowrap;}
 .book-title{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--paper);line-height:1.15;}
 .book-sub{font-size:12.5px;color:var(--paper-dim);margin-top:16px;max-width:220px;line-height:1.5;}
 
@@ -151,6 +151,25 @@ a{color:inherit;text-decoration:none;}
 .price-list li::before{content:'✓';color:var(--moss-bright);font-weight:700;flex:none;}
 .cta-final{padding:80px 0 100px;text-align:center;border-top:1px solid var(--line);}
 
+.preview{padding:70px 0;border-top:1px solid var(--line);}
+.preview h2{font-size:42px;margin-bottom:8px;}
+.preview .sub{color:var(--paper-dim);font-size:15px;margin-bottom:30px;}
+.preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.preview-grid figure{margin:0;}
+.preview-grid img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line);
+  box-shadow:0 30px 60px -25px rgba(0,0,0,0.8);}
+.preview-grid figcaption{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--paper-dim);
+  margin-top:12px;text-align:center;}
+
+/* barra fixa de compra (celular) */
+.sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:900;display:none;align-items:center;gap:12px;
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(18,24,31,0.96);
+  border-top:1px solid var(--gold);backdrop-filter:blur(6px);transform:translateY(110%);transition:transform .25s ease;}
+.sticky-buy.show{transform:translateY(0);}
+.sticky-buy .sb-price{font-family:'Bebas Neue',sans-serif;font-size:32px;line-height:1;color:var(--gold);}
+.sticky-buy .sb-note{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--paper-dim);margin-top:2px;}
+.sticky-buy .btn-comprar{margin-left:auto;padding:13px 18px;font-size:15px;white-space:nowrap;}
+
 footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;}
 footer p{font-size:12.5px;color:var(--paper-dim);}
 
@@ -190,6 +209,10 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
   .chapter-item:nth-child(even){padding-left:0;}
   .price-card-final{padding:34px 26px;}
   .guarantee-row{flex-direction:column;text-align:center;}
+  .preview-grid{grid-template-columns:1fr;max-width:330px;margin:0 auto;}
+  .sticky-buy{display:flex;}
+  body{padding-bottom:74px;}
+  .book-eyebrow{letter-spacing:4px;}
 }
 </style>
 <!-- Utmify: repassa as UTMs dos anúncios para os links do checkout -->
@@ -207,9 +230,9 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
         <span class="texto"><strong>Mais de 100 pessoas</strong> já compraram</span>
       </div>
       <div class="eyebrow">Guia completo · PDF · 22 páginas</div>
-      <h1>Pare de treinar <em>no achismo.</em><br>Aprenda calistenia do jeito certo.</h1>
-      <p>Guia direto ao ponto: movimentos fundamentais, como montar seu treino, progressão,
-      alimentação e os erros que travam quem tá começando. Sem academia, sem equipamento.</p>
+      <h1>Sem academia.<br>Sem equipamento.<br><em>Sem desculpa.</em></h1>
+      <p>Aprenda calistenia do jeito certo, em casa e do zero: movimentos fundamentais, plano de
+      8 semanas, como progredir sem se machucar e os erros que travam quem tá começando.</p>
 
       <div class="bonus-tag">
         <span class="star">★</span>
@@ -239,7 +262,7 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
       <div class="book-ribbon">+ 4 BÔNUS</div>
       <div class="forja-mark"><span>F</span></div>
       <div class="book-brand">FORJA</div>
-      <div class="book-eyebrow">G U I A   C O M P L E T O</div>
+      <div class="book-eyebrow">GUIA COMPLETO</div>
       <div class="book-title">Calistenia para Iniciantes</div>
       <div class="book-sub">Tudo que você precisa saber pra começar a treinar sem
       academia, sem equipamento, sem desculpa.</div>
@@ -320,6 +343,16 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
         <h4>Quem tem pouco tempo livre</h4>
         <p>Treinos de 25 a 40 minutos, sem deslocamento até academia nenhuma.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="preview">
+    <h2>Dá uma olhada por dentro</h2>
+    <p class="sub">Páginas reais do guia. Cada exercício tem foto, como fazer e a versão pra iniciante.</p>
+    <div class="preview-grid">
+      <figure><img src="img/pagina-movimentos.jpg" alt="Página do guia: os seis movimentos fundamentais, com foto da flexão de braço" loading="lazy" width="744" height="1052"><figcaption>Os 6 movimentos, com foto e execução</figcaption></figure>
+      <figure><img src="img/pagina-plano.jpg" alt="Página do guia: plano de 8 semanas com tabela de séries e repetições" loading="lazy" width="744" height="1052"><figcaption>Plano de 8 semanas, semana a semana</figcaption></figure>
+      <figure><img src="img/pagina-checklist.jpg" alt="Página do guia: checklist semanal pra imprimir" loading="lazy" width="744" height="1052"><figcaption>Checklist semanal pra imprimir</figcaption></figure>
     </div>
   </section>
 
@@ -465,6 +498,14 @@ footer p{font-size:12.5px;color:var(--paper-dim);}
   </section>
 </div>
 
+<div class="sticky-buy" id="sticky-buy" aria-hidden="true">
+  <div>
+    <div class="sb-price">R$8,99</div>
+    <div class="sb-note">guia + 4 bônus · pagamento único</div>
+  </div>
+  <a href="https://pay.cakto.com.br/32ngd6z" class="btn-comprar" tabindex="-1">Quero agora →</a>
+</div>
+
 <div class="exit-overlay" id="exit-overlay" role="dialog" aria-modal="true" aria-labelledby="exit-title">
   <div class="exit-box">
     <button class="exit-close" type="button" aria-label="Fechar">×</button>
@@ -495,6 +536,23 @@ document.querySelectorAll('.faq-item').forEach(item=>{
     item.classList.toggle('open');
   });
 });
+
+// Barra fixa de compra: aparece quando o botão do topo sai da tela e some perto da oferta final
+(function(){
+  const barra = document.getElementById('sticky-buy');
+  const topo = document.querySelector('.hero .btn-comprar');
+  const final = document.querySelector('.cta-final');
+  if (!barra || !topo || !final || !('IntersectionObserver' in window)) return;
+  let topoVisivel = true, finalVisivel = false;
+  function atualizar(){
+    const mostrar = !topoVisivel && !finalVisivel;
+    barra.classList.toggle('show', mostrar);
+    barra.setAttribute('aria-hidden', mostrar ? 'false' : 'true');
+    barra.querySelector('a').tabIndex = mostrar ? 0 : -1;
+  }
+  new IntersectionObserver(e => { topoVisivel = e[0].isIntersecting || e[0].boundingClientRect.top > 0; atualizar(); }).observe(topo);
+  new IntersectionObserver(e => { finalVisivel = e[0].isIntersecting; atualizar(); }).observe(final);
+})();
 
 // Aviso de saída: aparece uma vez por visita, quando a pessoa parece estar indo embora
 (function(){
