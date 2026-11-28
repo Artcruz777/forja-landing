@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Força na Caneta — Treino e alimentação para cuidar dos músculos</title>
+<meta name="description" content="Guia de treino de força em casa e alimentação para quem usa caneta emagrecedora com acompanhamento médico.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+:root{--ink:#fff6fa;--ink-2:#ffffff;--paper:#35102f;--dim:#6d4a66;--gold:#d81b72;--purple:#7b2ff7;--coral:#ff6f61;--line:#f6cfe0;--grad:linear-gradient(100deg,#d81b72,#7b2ff7);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--ink);color:var(--paper);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+h1,h2{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.5px;}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px;}
+.topbar{background:var(--grad);color:#fff;text-align:center;padding:10px 16px;font:700 12.5px 'JetBrains Mono',monospace;}
+.eyebrow{font:500 12px 'JetBrains Mono',monospace;letter-spacing:3px;color:var(--gold);text-transform:uppercase;}
+section{padding:60px 0;border-top:1px solid var(--line);}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;border-top:none;}
+.hero h1{font-size:66px;line-height:1;margin:16px 0 18px;}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero p{color:var(--dim);font-size:17.5px;margin-bottom:26px;max-width:500px;}
+.price{font-family:'Bebas Neue',sans-serif;font-size:72px;line-height:1;color:var(--gold);}
+.small{font:500 12.5px 'JetBrains Mono',monospace;color:var(--dim);margin:4px 0 20px;}
+.btn{display:inline-block;background:var(--grad);color:#fff;box-shadow:0 14px 28px -12px rgba(216,27,114,.75);font-weight:800;font-size:17px;padding:17px 30px;border-radius:10px;text-decoration:none;text-align:center;}
+.btn[aria-disabled="true"]{opacity:.7;cursor:default;box-shadow:none;}
+.book .verao{font:400 28px 'Bebas Neue',sans-serif;letter-spacing:2px;color:#ffe36e;margin-bottom:14px;}
+.book .seringas{width:110px;height:101px;margin-bottom:10px;}
+.capa{width:100%;max-width:400px;height:auto;display:block;margin:0 auto;border-radius:10px;box-shadow:0 40px 70px -28px rgba(123,47,247,.65);}
+.hero p.note{font-size:12.5px;margin:14px 0 0;max-width:460px;}
+.book{background:linear-gradient(155deg,#ff6f61 0%,#d81b72 48%,#7b2ff7 100%);color:#fff;border-radius:10px;aspect-ratio:210/297;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:36px 26px;box-shadow:0 40px 70px -28px rgba(123,47,247,.65);position:relative;}
+.book::before{content:'';position:absolute;inset:14px;border:1px solid rgba(255,255,255,.55);}
+.mark{width:44px;height:44px;border:2px solid #fff;transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-bottom:22px;}
+.mark span{transform:rotate(-45deg);font-family:'Bebas Neue',sans-serif;font-size:23px;color:#fff;}
+.book b{font-size:15px;letter-spacing:2px;}
+.book .t{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1.05;margin:26px 0 14px;}
+.book .s{font-size:12.5px;color:#fff;max-width:220px;}
+h2{font-size:42px;line-height:1.05;margin-bottom:12px;}
+.sub{color:var(--dim);font-size:15.5px;max-width:620px;margin-bottom:30px;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.card{background:var(--ink-2);border:1px solid var(--line);border-radius:18px;padding:24px 22px;box-shadow:0 14px 30px -22px rgba(216,27,114,.55);}
+.grid .card:nth-child(1){border-top:5px solid var(--gold);}
+.grid .card:nth-child(2){border-top:5px solid var(--purple);}
+.grid .card:nth-child(3){border-top:5px solid var(--coral);}
+.card h3{font-size:16px;margin-bottom:8px;}
+.card p{font-size:14px;color:var(--dim);}
+figure img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line);}
+figcaption{font:500 12px 'JetBrains Mono',monospace;color:var(--dim);text-align:center;margin-top:10px;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+ul{list-style:none;}
+li{padding:9px 0;border-top:1px solid var(--line);font-size:14.5px;color:var(--dim);display:flex;gap:10px;}
+li:first-child{border-top:none;}
+li::before{content:'✓';color:var(--gold);font-weight:800;}
+.no li::before{content:'✕';color:#8a6a83;}
+details{border-top:1px solid var(--line);padding:18px 0;max-width:720px;}
+summary{cursor:pointer;font-weight:600;}
+details p{color:var(--dim);font-size:14.5px;padding-top:10px;}
+.final{text-align:center;}
+.box{max-width:500px;margin:0 auto;background:var(--ink-2);border:2px solid var(--gold);border-radius:22px;box-shadow:0 30px 60px -30px rgba(216,27,114,.5);padding:40px 28px;}
+.box .btn{width:100%;}
+.box ul{text-align:left;margin:20px 0 24px;}
+footer{border-top:1px solid var(--line);padding:28px 24px 44px;text-align:center;font-size:12.5px;color:var(--dim);}
+footer p{max-width:700px;margin:0 auto;}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:40px;}
+  .hero h1{font-size:48px;}
+  .hero .btn{width:100%;}
+  .book{max-width:270px;width:100%;margin:0 auto;}
+  .grid,.two{grid-template-columns:1fr;}
+  .previews{max-width:330px;margin:0 auto;}
+}
+</style>
+<!-- Utmify: repassa as UTMs para o checkout. Sem pixel da Meta nesta página, de propósito (assunto de saúde). -->
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+</head>
+<body>
+
+<div class="topbar">GUIA EM PDF · TREINO EM CASA · PLANO DE 8 SEMANAS</div>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Para quem usa caneta emagrecedora com médico</div>
+      <h1>O peso muda.<br><em>Cuide dos seus músculos.</em></h1>
+      <p>Um guia simples de treino de força em casa e alimentação para os dias de pouca fome. Para complementar o acompanhamento do seu médico e do seu nutricionista.</p>
+      <div class="price">R$19,90</div>
+      <div class="small">pagamento único · 7 dias de garantia</div>
+      <a class="btn js-buy" href="#">Quero o guia →</a>
+      <p class="note">O guia não vende nem indica remédio, não fala de dose e não promete perda de peso.</p>
+    </div>
+    <img class="capa" src="capa.jpg" alt="Capa do guia Força na Caneta, Projeto Verão" width="1086" height="1536">
+  </section>
+
+  <section>
+    <h2>Por que isso importa</h2>
+    <p class="sub">Ao emagrecer, com remédio ou sem, não sai só gordura: parte do peso perdido é massa magra, que inclui músculo. Treino de força e proteína suficiente ajudam a preservá-lo.</p>
+    <div class="grid">
+      <div class="card"><h3>Pouca fome</h3><p>Como priorizar a proteína quando cabe pouca comida no prato.</p></div>
+      <div class="card"><h3>Não saber treinar</h3><p>Exercícios com versão fácil, usando cadeira, parede e mochila.</p></div>
+      <div class="card"><h3>Olhar só a balança</h3><p>Testes simples para acompanhar sua força ao longo das semanas.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dá uma olhada por dentro</h2>
+    <p class="sub">Páginas reais do guia.</p>
+    <div class="grid previews">
+      <figure><img src="proteina.jpg" alt="Página do guia sobre proteína" loading="lazy" width="744" height="1052"><figcaption>Proteína com pouca fome</figcaption></figure>
+      <figure><img src="treinos.jpg" alt="Página do guia com os treinos A e B" loading="lazy" width="744" height="1052"><figcaption>Treinos A e B</figcaption></figure>
+      <figure><img src="plano.jpg" alt="Página do guia com o plano de 8 semanas" loading="lazy" width="744" height="1052"><figcaption>Plano de 8 semanas</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Antes de comprar</h2>
+    <p class="sub">Para você saber exatamente o que está levando.</p>
+    <div class="two">
+      <div class="card"><h3>O guia tem</h3>
+        <ul>
+          <li>Checagem de segurança e sinais de alerta</li>
+          <li>Proteína, água, enjoo e intestino</li>
+          <li>8 exercícios explicados e treinos A e B</li>
+          <li>Plano de 8 semanas, com dicas para semanas difíceis</li>
+          <li>Testes de força e registro semanal</li>
+          <li>Perguntas para levar à consulta</li>
+        </ul>
+      </div>
+      <div class="card no"><h3>O guia não tem</h3>
+        <ul>
+          <li>Indicação ou venda de medicamento</li>
+          <li>Orientação de dose ou de como conseguir</li>
+          <li>Promessa de quilos ou de resultado mais rápido</li>
+          <li>Dieta personalizada</li>
+          <li>Substituto para médico ou nutricionista</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Serve para qualquer pessoa?</summary><p>É para adultos com tratamento prescrito e acompanhado por médico. Não é para grávidas ou quem amamenta. Quem tem alguma condição de saúde deve pedir liberação antes de treinar.</p></details>
+    <details><summary>Nunca treinei. Consigo?</summary><p>Os exercícios têm uma versão inicial e o plano começa leve. Mesmo assim, confirme com seu médico se está liberado.</p></details>
+    <details><summary>O guia faz o remédio funcionar melhor?</summary><p>Não prometemos isso. O foco é treino, alimentação e acompanhamento da sua força. Dúvidas sobre o efeito do remédio são com o médico.</p></details>
+    <details><summary>Como recebo?</summary><p>Em PDF, pelo e-mail informado na compra, depois que o pagamento é aprovado.</p></details>
+    <details><summary>Tem garantia?</summary><p>Sim. Você tem 7 dias para pedir reembolso, como em qualquer compra online no Brasil.</p></details>
+  </section>
+
+  <section class="final">
+    <div class="box">
+      <div class="eyebrow">Força na Caneta</div>
+      <div class="price" style="margin-top:14px;">R$19,90</div>
+      <ul>
+        <li>Guia em PDF, com treinos para fazer em casa</li>
+        <li>Plano de 8 semanas e folhas para imprimir</li>
+        <li>Pagamento único, 7 dias de garantia</li>
+      </ul>
+      <a class="btn js-buy" href="#">Quero o guia →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Material educativo. Não substitui consulta, diagnóstico ou orientação médica e nutricional. Não use medicamentos sem prescrição. A FORJA não vende medicamentos e não tem vínculo com fabricantes.</p>
+</footer>
+
+<script>
+// Checkout do produto na Cakto
+const CHECKOUT = 'https://pay.cakto.com.br/p8e446g_1382818';
+document.querySelectorAll('.js-buy').forEach(b => {
+  if (CHECKOUT) { b.href = CHECKOUT; return; }
+  b.removeAttribute('href');
+  b.setAttribute('aria-disabled', 'true');
+  b.textContent = 'Em breve';
+});
+</script>
+</body>
+</html>
